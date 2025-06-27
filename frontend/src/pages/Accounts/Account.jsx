@@ -17,31 +17,34 @@ const Account = () => {
   }, []);
 
   return (
-    <table className="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Account Name</th>
+    <>
+      <h1 className="bg-light text-center mt-2 mb-0 p-2">Accounts</h1>
+      <table className="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Account Name</th>
 
-          <th scope="col">Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        {accounts.map((account) => {
-          return (
-            <tr key={account.account_id}>
-              <th scope="row"> {accounts.indexOf(account)} </th>
-              <td>{account.account_name} </td>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {accounts.map((account) => {
+            return (
+              <tr key={account.account_id}>
+                <th scope="row"> {accounts.indexOf(account)} </th>
+                <td>{account.account_name} </td>
 
-              <td>
-                {" "}
-                {account.currency} {account.balance}
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+                <td>
+                  {" "}
+                  {account.currency} {account.balance}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </>
   );
 };
 
