@@ -1,0 +1,27 @@
+form {
+  background-color: white !important;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  select {
+    margin: 1rem 0;
+  }
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgba(128, 128, 128, 0.362);
+    border-radius: 1rem;
+  }
+}
+.error {
+  color: red;
+  margin-bottom: 0.5rem;
+}
+select {
+  margin-bottom: 0;
+}
+button {
+  background-color: #013220 !important;
+  color: white !important;
+}

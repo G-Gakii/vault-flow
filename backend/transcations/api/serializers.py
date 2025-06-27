@@ -50,7 +50,11 @@ class TransactionSerializer(serializers.ModelSerializer):
         validated_data['to_currency'] = to_currency
         
         
+        if from_account == to_account:
+            raise serializers.ValidationError({"from_account_name": "You cannot transfer money to yourself."})
         
+        if amount < 1:
+            raise serializers.ValidationError({"amount":"Minimum amount to transfer is 1"})
         
         if from_account.balance < amount:
            
